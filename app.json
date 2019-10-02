@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/query/query",
+    "pages/list/list",
+    "pages/index/index",
+    "pages/userInfo/userInfo",
+    "pages/book/book",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "红河学院教材管理系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#DF3031",
+    "borderStyle": "white",
+    "backgroundColor": "red",
+    "list": [
+      {
+        "pagePath": "pages/query/query",
+        "text": "查询",
+        "iconPath": "image/query.png",
+        "selectedIconPath": "image/query.png"
+      },
+      {
+        "pagePath": "pages/book/book",
+        "text": "预约",
+        "iconPath": "image/book.png",
+        "selectedIconPath": "image/book.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "image/mine.png",
+        "selectedIconPath": "image/mine.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
