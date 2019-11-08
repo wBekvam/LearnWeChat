@@ -46,7 +46,7 @@
 .book_list .book_content .book_title{
   font-size: 35rpx;
   display: inline-block;
-  height: 40rpx;
+  height: 50rpx;
   padding-top: 2rpx;
   overflow: hidden;
 }

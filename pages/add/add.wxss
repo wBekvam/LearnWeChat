@@ -1,0 +1,60 @@
+.page-content{
+  padding: 0;
+  margin: 8px;
+  background: #FFF;
+}
+.TipMessage{
+  padding: 6px;
+  font-size: 13pt;
+  border-radius: 6px;
+  color: #c09853;
+  background:#fcf8e3;
+}
+.orderList{
+  margin: 20px 10px;
+}
+.orderList image{
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+.orderList .listInfo{
+  padding: 2px 15px;
+  font-size: 15pt;
+}
+/* .orderList .listRemove{
+  color: #fff;
+  background: #e64340;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 11pt;
+  padding: 6px;
+  float: right;
+} */
+.orderList .listRemove{
+  float: right;
+  margin-right: 30px;
+}
+.orderList .listRemove image{
+  width: 25px;
+  height: 25px;
+  padding: 4px 0 0 0
+}
+.add{
+ display: flex;
+  margin: 20% 10px 0px 10px;
+  border-bottom: 1px solid #F5F5F5;
+  padding: 10px 0;
+}
+.add text{
+   width: 80px;
+   text-align: center;
+   font-size: 15pt;
+   color: black;
+}
+.add-btn{
+  margin-top: 20px;
+}
+.add-btn button{
+  width: 80%;
+}

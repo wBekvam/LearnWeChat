@@ -1,0 +1,50 @@
+<view class="page-content">
+    <view class="commom bindInfo">
+      <text >学号(姓名)：</text>
+      <view class="info">{{Value.OrderInfo.Name}}</view>
+    </view>
+    <view class="order-time commom ">
+      <view>  
+        <text class="date-time" style="float:right" decode="{{true}}">{{Value.OrderInfo.TheDate}}&nbsp;&nbsp;&nbsp;&nbsp;{{Value.OrderInfo.TimeInfo}}</text>
+        <text>预约时段：</text>
+      </view>
+      <view class="help-tip">
+        <view class="tip">请按预约的时段到教务处领取教材，过期请重新预约</view>
+        <!-- <button bindtap="cancleOrder" size="mini">取消预约</button> -->
+      </view>
+    </view>
+
+    <view wx:if="{{isMaster}}" class="help-master commom">
+      <view class="help-opt">
+        <view class="help-add" bindtap="add">
+          <image src="../../image/add.png"></image>
+          <text>添加带领同学</text>
+        </view>
+        <view class="help-cancel" bindtap="cancelOrder" >
+          <image src="../../image/cancel.png"></image>
+          <view bindtap="cancelOrder">取消预约</view>
+        </view>  
+      </view>
+      <view class="help-list">
+        <view class="item" wx:for="{{SlaveOrderInfos}}" wx:key="*this" >
+          <image src="../../image/people.png"></image>
+          <view class="listInfo">{{item.Name}}</view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="help-other commom">
+      <view class="btn" bindtap="cancleOrder">取消带领</view>
+      <view>你的教材由<label style="font-weight: bold;"> {{Value.OrderInfo.OrderName}}</label> 带领</view>
+    </view>
+
+    <view class="help-price commom">
+      <text>预定教材总金额：</text>
+      <view class="price">{{Value.DisplayPrice}}</view>
+      <view class="tip">实际金额以教材到货情况为准</view>
+    </view>
+
+    <view class="notes commom">
+      <view>{{Value.OrderInfo.BZ}}</view>
+      <canvas class='canvas' canvas-id='canvas' bindlongtap='save'></canvas>
+    </view>
+</view>

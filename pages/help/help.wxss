@@ -1,0 +1,149 @@
+.page-content{
+  margin: 0px;
+  padding: 0;
+  background: #F5F5F5;
+}
+
+.commom{
+  background: #fff;
+  border-radius: 6px;
+  margin: 4px 8px;
+  padding: 6px;
+}
+
+.bindInfo text{
+  font-size: 13pt;
+  font-weight: bold;
+}
+.bindInfo .info{
+ float: right;
+ text-align: center;
+ margin-right:15px;
+ font-size: 12pt; 
+ padding: 0px 6px 2px 6px;
+ border-radius: 10px;
+}
+
+.order-time text{
+  font-size: 13pt;
+  font-weight: bold;
+}
+
+.order-time .date-time{
+  margin: 2px 0px;
+  text-align: center;
+  font-size: 12pt; 
+  padding: 1px;
+  border-radius: 11px;
+  font-weight: normal;
+}
+.order-time .help-tip{
+  margin-top: 15px;
+  display: flex;
+}
+.order-time .tip{
+  font-size: 11pt;
+  color: gray;
+  margin: 5px 0;
+}
+.order-time button{
+  width: 80px;
+  height: 30px;
+  font-size: 9pt;
+  text-align: center;
+  padding: 0px 2px 2px 2px;
+}
+
+.help-master{
+  padding: 8px;
+}
+.help-master .help-opt{
+  display: flex;
+  padding-bottom: 6px;
+  border-bottom: 1px solid gainsboro;
+}
+.help-master .help-add{
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+.help-master .help-add image{
+  width: 25px;
+  height: 25px;
+}
+.help-master .help-add text{
+ font-size: 13pt;
+ font-weight: bold;
+ padding-left: 3px;
+ color: #09BB07; 
+}
+.help-master .help-cancel{
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+.help-master .help-cancel image{
+  width: 25px;
+  height: 25px;
+}
+.help-master .help-cancel view{
+  font-size: 13pt;
+  padding-left: 3px;
+  font-weight: bold;
+  color: #e64340;
+}
+.help-list .item{
+  display: flex;
+  margin: 10px 30px;
+}
+.help-list .item image{
+  width: 25px;
+  height: 25px;
+}
+.help-list .item .listInfo{
+  font-size: 12pt;
+  padding: 2px 0px 1px 3px;
+  color:	#696969;
+}
+
+.help-other view{
+  font-size: 11pt;
+}
+.help-other .btn{
+  font-size: 10pt;
+  padding: 4px;
+  border-radius: 4px;
+  background: #e64340;
+  color: #FFF;
+  float: right;
+}
+.help-price text{
+  font-size: 12pt;
+  font-weight: bold;
+}
+.help-price .price{
+  height:20px; 
+  text-align: center;
+  margin-right:10px;
+  font-size: 11pt; 
+  padding: 0px 6px 2px 6px;
+  border-radius: 10px;
+  float: right;
+  font-weight: bold;
+  color: #e64340;
+}
+
+.help-price .tip{
+  font-size: 11pt;
+  color: gray;
+  margin: 5px;
+}
+.notes{
+  background: #fff;
+  font-size: 11pt;
+}
+.notes canvas{
+  widows: 200px;
+  height: 200px;
+  margin: 20px;
+}

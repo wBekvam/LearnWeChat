@@ -1,0 +1,52 @@
+/* pages/bind/bind.wxss */
+.page-content{
+  margin: 0;
+  padding: 0;
+}
+.tipMsg{
+  font-size: 12pt;
+  height:30px;
+  background:#EE3B3B;
+  border-radius:5px;
+  margin:6px;
+  color:#fff;
+  text-align: center;
+  padding-top: 8px;
+}
+
+ text{
+  width: 75px;
+  text-align: center;
+  font-size: 15pt;
+  color: black;
+}
+.title{
+  margin-top: 10%;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.bind-id{
+  display: flex;
+  margin: 20px 10px 0px 10px;
+  border-bottom: 1px solid #F5F5F5;
+  padding: 10px 0;
+   
+}
+
+.bind-pwd{
+   display: flex;
+   margin: 5px 10px 0px 10px;
+   border-bottom: 1px solid #F5F5F5;
+   padding: 10px 0;
+   border-width: 80%;
+   
+}
+
+.submit{
+  margin-top: 40px;
+  text-align: center;
+}
+
+.submit button{
+  width: 85%;
+}

@@ -1,5 +1,40 @@
 <view class="page-section">
   <view class="header">
-    <view class="header_title" >教材预约</view>
+    <!-- 公告栏 -->
+    <view wx:if="{{showNotic}}" class="book-notic">
+      <view style="row">
+        <view style="float:right;margin: 6px " bindtap="closeNotic"><image src="../../image/clear.png"></image></view>
+        <view style="color:#c09853; font-size: 11pt;font-weight:bold">公告：</view>
+      </view>
+      <text class="book-notic-content" selectable="false" >{{orderNotic}}</text>
+    </view>
+    <view wx:else></view>
+    <view class="book-title" >点击时段即可预约：</view>
   </view>
+  <!-- 预约 -->
+  <view class="book">
+    <!-- 左侧栏 -->
+    <view class="book-left">
+      <scroll-view scroll-y="ture" style="height:{{book_Height}}px;" scroll-with-animation="ture" >
+        <view  class="book-nav-item {{curNav === item.dateId ? 'book-nav-active' : 'book-nav'}}" wx:for="{{orderDate}}"  wx:key="dateId" bindtap="selectNav" data-dateId='{{item.dateId}}'>
+          <view>{{item.time}}</view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 右侧栏 -->
+    <view class="book-right">
+      <scroll-view scroll-y="ture" scroll-into-view="{{scrollTopId}}" bindscroll="rightScroll"  scroll-with-animation="ture" style="height:{{book_Height}}px">
+        <!-- <view class="book-date">2019年9月1日</view> -->
+        <view class="book-item {{curTime === item.TimeID ? 'book-content-active' : 'book-content'}}" wx:for="{{Value[curNav].Times}}" wx:key="TimeID" bindtap="selectTime" data-timeid='{{item.TimeID}}'>
+          <view>
+            <view class="book-btn" catchtap="bindBook" data-timeid='{{item.TimeID}}'>{{item.SFYY?"预约":"锁定"}}</view>
+            <view class="book-hours">{{item.KSSJ}} - {{item.JSSJ}} </view>
+          </view>
+          <view class="book-status">已预约单次{{item.YYYDC}}/{{item.RCSX}}、人次{{item.YYYDLRC}}/{{item.DLSX}}</view>
+       </view>
+      </scroll-view>
+    </view>
+  </view>
+  
+  
 </view>

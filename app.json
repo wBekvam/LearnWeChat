@@ -1,41 +1,51 @@
 {
   "pages": [
-    "pages/query/query",
-    "pages/list/list",
-    "pages/index/index",
+    "pages/bind/bind",
+    "pages/add/add",
+    "pages/help/help",
     "pages/userInfo/userInfo",
+    "pages/index/index",
+    "pages/queryOrder/queryOrder",
     "pages/book/book",
+    "pages/query/query",
+    "pages/list/list", 
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "红河学院教材管理系统",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#353535",
+    "navigationBarTitleText": "红河学院教材预约",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color": "#000000",
-    "selectedColor": "#DF3031",
+    "color": "black",
+    "selectedColor": "#09bb07",
     "borderStyle": "white",
-    "backgroundColor": "red",
+    "backgroundColor": "#f6f6f7",
     "list": [
       {
-        "pagePath": "pages/query/query",
-        "text": "查询",
+        "pagePath": "pages/bind/bind",
+        "text": "学号绑定",
         "iconPath": "image/query.png",
-        "selectedIconPath": "image/query.png"
-      },
+        "selectedIconPath": "image/SelectQuery.png"
+      },  
       {
         "pagePath": "pages/book/book",
-        "text": "预约",
+        "text": "预约时段",
         "iconPath": "image/book.png",
-        "selectedIconPath": "image/book.png"
+        "selectedIconPath": "image/SelectBook.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/help/help",
+        "text": "预约带领",
+        "iconPath": "image/help.png",
+        "selectedIconPath": "image/helpSelect.png"
+      },
+      {
+        "pagePath": "pages/userInfo/userInfo",
         "text": "我的",
         "iconPath": "image/mine.png",
-        "selectedIconPath": "image/mine.png"
+        "selectedIconPath": "image/SelectMine.png"
       }
     ]
   },

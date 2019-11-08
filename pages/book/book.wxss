@@ -1,14 +1,122 @@
-.header{
-  width:100%;
-  height:40px; 
-  color: #fff; 
-  background:#008B8B; 
-  border-bottom: 1px solid	#008B8B; 
-  position: relative;
+.page-section{
+  padding: 0;
+  margin: 0;
 }
-.header_title{
-  font-size: 18px; 
-  text-align: center; 
-  line-height: 40px; 
-  font-weight: normal;
+
+.book-notic{
+  margin: 2px 6px;
+  padding: 8px;
+  border-radius: 4px;
+  color: #c09853;
+  font-size: 10pt;
+  background:#fcf8e3;
 }
+.book-notic image{
+  width: 15px;
+  height: 15px;
+}
+.book-title{
+  padding: 8px;
+  font-size: 14pt;
+  color: black;
+  background: #F5F5F5;
+   border-bottom: 1px solid #ddd;
+}
+
+.book{
+  display: flex;
+  background-color: #fff;
+}
+/* 左侧 */
+.book .book-left{
+  width: 30%;
+  background:#F5F5F5;
+}
+
+.book-nav-item{
+	 text-align: center;
+   color: black;
+   height: 30px;
+   padding: 12px 2px 1px 2px;
+   border-bottom: 2rpx solid #DCDCDC;
+}
+
+/* 左侧选中样式 */
+.book .book-nav-active{
+   border-left: 6px solid #09bb07;
+   font-size: 13pt;
+   background:	#fff;
+}
+/* 左侧不被选中样式 */
+.book .book-nav{
+   font-size: 12pt;
+   border-right: 1px solid #ddd;
+   
+}
+
+/* 右侧 */
+.book .book-right{
+  width: 100%;
+  padding: 0;
+  margin-left: 6px;
+}
+
+.book-hours{
+  font-size: 15pt;
+  color: black;
+  font-weight: bold;
+}
+.book-status{
+  margin-top: 8px;
+  color: gray;
+  font-size: 11pt;
+}
+/* 右侧选中 */
+.book-item{
+  height: 60px;
+  padding: 6px 0rpx 2px 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+.book-content-active{
+  background: #DCDCDC;
+  opacity: 0.9;
+  border-radius: 8px;
+}
+
+.book-content-active .book-btn{
+  float: right;
+  width: 55px;
+  height: 25px;
+  font-size: 12pt;
+  border-radius: 5px;
+  margin-right: 8px;
+  margin-top: 15px;
+  padding-top: 1px;
+  color:#fff;
+  text-align: center;
+  background: #09bb07;
+  
+}
+
+/* 右侧未选中 */
+.book-content{
+  background: #fff;
+}
+
+.book-content .book-btn{
+   float: right;
+   width:1rpx;
+   height:1rpx; 
+   font-size:1rpx;
+   border-radius:5rpx;
+   margin-left: 20rpx;
+   margin-top: 30rpx;
+   padding: 0rpx;
+   color:#fff;
+   text-align: center;
+   background: #fff;
+}
+
+
+

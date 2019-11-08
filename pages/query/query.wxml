@@ -1,14 +1,14 @@
 <view class="page-section">
-  <view class="header">
-    <view class="header_title" >教材查询</view>
+  <view>
+    <form bindsubmit="formSubmit">
+      <label style="color:grey;font-size:10pt">请输入您的学号:</label>
+      <view class="book_input">
+        <input class="weui-input" type="number" maxlength="12" bindinput="bindInput" name='studentID' placeholder="请输入您的学号" />
+      </view>
+      <view>
+        <button class="weui-button" form-type="submit" type="{{buttonType}}" size="{{primarySize}}" 
+        loading="{{loading}}" plain="{{plain}}" disabled="{{buttonStatus}}" bindquerybooks="bindQueryBooks">查询 </button>
+      </view>
+    </form> 
   </view>
-  <form bindsubmit="formSubmit">
-    <view class="">
-      <input class="weui-input" type="number" maxlength="12" placeholder="请输入您的学号" />
-    </view>
-    <view>
-      <button class="weui-button" form-type="submit" type="primary" size="{{primarySize}}" 
-      loading="{{loading}}" plain="{{plain}}" bindquerybooks="bindQueryBooks">查询 </button>
-    </view>
-  </form> 
 </view>

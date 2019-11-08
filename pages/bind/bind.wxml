@@ -1,0 +1,23 @@
+<view class="page_content">
+  <view style="height:50px; border: 1px solid white;">
+    <view class="tipMsg" wx:if="{{showTipMsg}}">
+      {{tipMsg}}
+    </view>
+  </view>
+  <view class="title">
+    <text>请先绑定教务选课系统</text>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="bind-id">
+      <text>学号</text> 
+      <input type="number" maxlength="12" name="xh" placeholder="请输入您的学号" placeholder-style="color:#D3D3D3" value="{{studentID}}" bindblur="bindStudentID" focus="true" style="color:{{xh_input_style}}"></input>
+    </view>
+    <view class="bind-pwd">
+      <text>密码</text> 
+      <input password="true" name="pwd" placeholder="请输入教务系统选课密码" placeholder-style="color:#D3D3D3" value="{{password}}"></input>
+    </view>
+    <view class="submit">
+      <button type="primary" loading="{{loading}}" form-type="submit">绑定学号</button>
+    </view>
+  </form>
+</view>

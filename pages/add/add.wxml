@@ -1,0 +1,19 @@
+<view class="page-content">
+  <view class="TipMessage">
+    <text>请输入要代领同学的学号，每次预约最多可以帮4位同学代领教材。</text>
+  </view>
+  <view class="orderList" wx:for="{{SlaveOrderInfos}}" wx:key="*this" >
+    <image src="../../image/people.png"></image>
+    <view class="listRemove" bindtap="cancleOrder" data-xh="{{item.XH}}" ><image src="../../image/remove.png"></image></view>
+    <view class="listInfo">{{item.Name}}</view>
+  </view>
+  <form bindsubmit="OrderSubmit" >
+    <view class="add ">
+      <text>学号</text> 
+      <input placeholder="请输入带领同学学号" placeholder-style="color:#D3D3D3" name="xh" type="number" maxlength="12"></input>
+    </view>
+    <view class="add-btn">
+      <button type="primary" formType="submit" disabled="{{disabled}}">添加</button>
+    </view>
+  </form>
+</view>
