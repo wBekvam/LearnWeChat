@@ -9,22 +9,20 @@
         <text>预约时段：</text>
       </view>
       <view class="help-tip">
-        <view class="tip">请按预约的时段到教务处领取教材，过期请重新预约</view>
+        <view class="tip">请按预约的时段到教务处领取教材，过期请<text style="font-size:12pt;color:#e64340;" bindtap="cancelOrder">重新预约</text></view>
         <!-- <button bindtap="cancleOrder" size="mini">取消预约</button> -->
       </view>
     </view>
 
     <view wx:if="{{isMaster}}" class="help-master commom">
-      <view class="help-opt">
-        <view class="help-add" bindtap="add">
+        <view class="help-opt help-add" bindtap="add">
           <image src="../../image/add.png"></image>
           <text>添加带领同学</text>
         </view>
-        <view class="help-cancel" bindtap="cancelOrder" >
+        <!-- <view class="help-cancel" bindtap="cancelOrder" >
           <image src="../../image/cancel.png"></image>
           <view bindtap="cancelOrder">取消预约</view>
-        </view>  
-      </view>
+        </view>   -->
       <view class="help-list">
         <view class="item" wx:for="{{SlaveOrderInfos}}" wx:key="*this" >
           <image src="../../image/people.png"></image>
@@ -45,6 +43,7 @@
 
     <view class="notes commom">
       <view>{{Value.OrderInfo.BZ}}</view>
-      <canvas class='canvas' canvas-id='canvas' bindlongtap='save'></canvas>
+      <!-- <canvas class='canvas' canvas-id='canvas' bindlongtap='save'></canvas> -->
+      <canvas class='canvas' style="width: 200px; height: 200px;" canvas-id="canvas" bindlongtap='save'></canvas>
     </view>
 </view>

@@ -64,7 +64,7 @@
 }
 .help-master .help-add{
   display: flex;
-  width: 50%;
+  width: 100%;
   justify-content: center;
 }
 .help-master .help-add image{
@@ -77,7 +77,7 @@
  padding-left: 3px;
  color: #09BB07; 
 }
-.help-master .help-cancel{
+/* .help-master .help-cancel{
   display: flex;
   width: 50%;
   justify-content: center;
@@ -91,7 +91,7 @@
   padding-left: 3px;
   font-weight: bold;
   color: #e64340;
-}
+} */
 .help-list .item{
   display: flex;
   margin: 10px 30px;

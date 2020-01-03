@@ -24,12 +24,9 @@
     <!-- 右侧栏 -->
     <view class="book-right">
       <scroll-view scroll-y="ture" scroll-into-view="{{scrollTopId}}" bindscroll="rightScroll"  scroll-with-animation="ture" style="height:{{book_Height}}px">
-        <!-- <view class="book-date">2019年9月1日</view> -->
         <view class="book-item {{curTime === item.TimeID ? 'book-content-active' : 'book-content'}}" wx:for="{{Value[curNav].Times}}" wx:key="TimeID" bindtap="selectTime" data-timeid='{{item.TimeID}}'>
-          <view>
-            <view class="book-btn" catchtap="bindBook" data-timeid='{{item.TimeID}}'>{{item.SFYY?"预约":"锁定"}}</view>
-            <view class="book-hours">{{item.KSSJ}} - {{item.JSSJ}} </view>
-          </view>
+          <view class="book-btn" wx:if="{{curTime === item.TimeID}}" catchtap="bindBook" data-timeid='{{item.TimeID}}'data-author='{{item.SFYY}}'>{{item.SFYY?"预约":"锁定"}}</view>
+          <view class="book-hours">{{item.KSSJ}} - {{item.JSSJ}} </view>
           <view class="book-status">已预约单次{{item.YYYDC}}/{{item.RCSX}}、人次{{item.YYYDLRC}}/{{item.DLSX}}</view>
        </view>
       </scroll-view>

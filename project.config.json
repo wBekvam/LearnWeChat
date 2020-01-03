@@ -10,7 +10,7 @@
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
-		"autoAudits": false,
+		"autoAudits": true,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
@@ -22,7 +22,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.3",
-	"appid": "wx9a84ef8bb47169fd",
+	"appid": "wx1e9f0041d32ae4bf",
 	"projectname": "LearnWeiChat",
 	"debugOptions": {
 		"hidedInDevtools": []

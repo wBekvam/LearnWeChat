@@ -52,6 +52,9 @@
    font-size: 15pt;
    color: black;
 }
+.add input{
+   padding-top: 3px;
+}
 .add-btn{
   margin-top: 20px;
 }

@@ -10,7 +10,7 @@
   <form bindsubmit="OrderSubmit" >
     <view class="add ">
       <text>学号</text> 
-      <input placeholder="请输入带领同学学号" placeholder-style="color:#D3D3D3" name="xh" type="number" maxlength="12"></input>
+      <input placeholder="请输入需要带领的学号" placeholder-style="color:#D3D3D3" name="xh" type="number" maxlength="12"></input>
     </view>
     <view class="add-btn">
       <button type="primary" formType="submit" disabled="{{disabled}}">添加</button>

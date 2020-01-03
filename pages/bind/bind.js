@@ -29,9 +29,13 @@ Page({
       this.showTipMsg("学号或密码不能为空")
       return;
     }
+    var existXH = wx.getStorageSync("studentID");
+    if(existXH != ""){
+      wx.setStorageSync("studentID", "")
+    } 
     // 教务系统认证
     wx.request({
-      url: 'http://jygl.uoh.edu.cn/TmAPI/CheckLogin',
+      url: app.globalData.URL+'/CheckLogin',
       data: {
         "xh": xh,
         "pwd": pwd
@@ -55,7 +59,7 @@ Page({
           app.globalData.isLogin = true
           // 判断当前登陆的学号是否有预约时段
           wx.request({
-            url: 'http://jygl.uoh.edu.cn/TmAPI/GetOrderInfo',
+            url: app.globalData.URL +'/GetOrderInfo',
             data: {
               "xh": xh
             },
@@ -66,8 +70,13 @@ Page({
                 /*有预约时段，跳转到带领页面
                 * 参数：学号：xh
                 */
-                wx.setStorageSync('isOrder', true)
-                wx.setStorageSync("OrderInfo", res.data.Value)
+                //有预约时段，将预约信息本地存储
+                try {
+                  wx.setStorageSync('isOrder', true);
+                  wx.setStorageSync("OrderInfo", res.data.Value);
+                } catch (e) {
+                  console.log(e)
+                }
                 wx.switchTab({
                   url: '/pages/help/help'
                 })

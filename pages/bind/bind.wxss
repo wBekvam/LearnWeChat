@@ -39,7 +39,10 @@
    border-bottom: 1px solid #F5F5F5;
    padding: 10px 0;
    border-width: 80%;
-   
+}
+
+input{
+  padding-top: 3px;
 }
 
 .submit{

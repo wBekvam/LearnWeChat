@@ -60,7 +60,7 @@ Page({
     });
     // 判断当前登陆的学号是否有预约时段
     wx.request({
-      url: 'http://jygl.uoh.edu.cn/TmAPI/GetOrderInfo',
+      url: app.globalData.URL +"/GetOrderInfo",
       data: {
         "xh": paraXH
       },
@@ -103,7 +103,7 @@ Page({
   //取消预约
   cancelOrder: (res) => {
     wx.request({
-      url: 'http://jygl.uoh.edu.cn/TmAPI/CancelOrder',
+      url: app.globalData.URL +"/CancelOrder",
       data: { "xh": paraXH },
       header: { "content-type": 'application/json'},
       method: 'POST',
@@ -139,7 +139,6 @@ Page({
   },
   //添加预约
   add:function(){
-    console.log(paraXH)
     wx.navigateTo({
       url: `/pages/add/add?xh=${paraXH}&timeid=${TimeID}`,
     })

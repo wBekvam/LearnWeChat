@@ -12,8 +12,8 @@
   background:#fcf8e3;
 }
 .book-notic image{
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
 }
 .book-title{
   padding: 8px;
@@ -104,7 +104,7 @@
   background: #fff;
 }
 
-.book-content .book-btn{
+/* .book-content .book-btn{
    float: right;
    width:1rpx;
    height:1rpx; 
@@ -116,7 +116,7 @@
    color:#fff;
    text-align: center;
    background: #fff;
-}
+} */
 
 
 

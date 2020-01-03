@@ -1,15 +1,9 @@
 {
   "pages": [
     "pages/bind/bind",
-    "pages/add/add",
-    "pages/help/help",
-    "pages/userInfo/userInfo",
-    "pages/index/index",
-    "pages/queryOrder/queryOrder",
     "pages/book/book",
-    "pages/query/query",
-    "pages/list/list", 
-    "pages/logs/logs"
+    "pages/add/add",
+    "pages/help/help"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -40,12 +34,6 @@
         "text": "预约带领",
         "iconPath": "image/help.png",
         "selectedIconPath": "image/helpSelect.png"
-      },
-      {
-        "pagePath": "pages/userInfo/userInfo",
-        "text": "我的",
-        "iconPath": "image/mine.png",
-        "selectedIconPath": "image/SelectMine.png"
       }
     ]
   },

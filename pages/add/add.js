@@ -1,5 +1,6 @@
 var OrderXH = ""
 var TimeID = ""
+var app = getApp()
 Page({
   /**
    * 页面的初始数据
@@ -23,7 +24,7 @@ Page({
   onShow:function(){
     var that = this
     wx.request({
-      url: 'http://jygl.uoh.edu.cn/TmAPI/GetOrderInfo',
+      url: app.globalData.URL +'/GetOrderInfo',
       data: {
         "xh": OrderXH
       },
@@ -43,17 +44,17 @@ Page({
             })
           }
           var OrderCount = res.data.Value.SlaveOrderInfos.length
+          // 最多只能帮领4人
           if(OrderCount == 4){
             that.setData({
               disabled: true
             })
           }
         }
-        that.setData({
-          Value: res.data.Value
-        })
       },
-      fail: function (res) { },
+      fail: function (res) {
+        console.log(res);
+       },
     })
   }, 
   // 取消带领
@@ -61,16 +62,14 @@ Page({
     // 接收取消带领学号
     var cancleXH = e.currentTarget.dataset.xh
     wx.request({
-      url: 'http://jygl.uoh.edu.cn/TmAPI/CancelOrder',
+      url: app.globalData.URL +'/CancelOrder',
       data: {
         "xh": cancleXH, 
       },
       header: { "content-type": 'application/json' },
       method: 'POST',
       success: function (res) {
-        console.log(res)
         if (res.data.Success) {
-          console.log("取消预约成功")
         wx.redirectTo({
           url: `/pages/add/add?xh=${OrderXH}&timeid=${TimeID}`
         })
@@ -91,38 +90,37 @@ Page({
   //添加带领
   OrderSubmit: function (e) {
     var that = this;
-    console.log(e)
     var xh = e.detail.value.xh
-    //预约
-    wx.request({
-      url: 'http://jygl.uoh.edu.cn/TmAPI/Order',
-      data: {
-        "xh": xh,
-        "timeId": TimeID,
-        "orderXh": OrderXH
-      },
-      header: { "content-type": 'application/json' },
-      method: 'POST',
-      success: function (res) {
-        var msg = res.data.ErrorMessage
-        console.log(res)
-        if (res.data.Success) {
-          wx.redirectTo({
-            url: `/pages/add/add?xh=${OrderXH}&timeid=${TimeID}`,
-          })
-        } else {
-          wx.showModal({
-            content: msg,
-            confirmText: '确定',
-            showCancel: false
-          })
-        }
-
-      },
-      fail: function (res) {
-        console.log("预约失败")
-      },
-    })
+    if(xh !="" && xh.length==12){
+      //预约
+      wx.request({
+        url: app.globalData.URL +'/Order',
+        data: {
+          "xh": xh,
+          "timeId": TimeID,
+          "orderXh": OrderXH
+        },
+        header: { "content-type": 'application/json' },
+        method: 'POST',
+        success: function (res) {
+          var msg = res.data.ErrorMessage
+          if (res.data.Success) {
+            wx.redirectTo({
+              url: `/pages/add/add?xh=${OrderXH}&timeid=${TimeID}`,
+            })
+          } else {
+            wx.showModal({
+              content: msg,
+              confirmText: '确定',
+              showCancel: false
+            })
+          }
+        },
+        fail: function (res) {
+          console.log("预约失败")
+        },
+      })
+    }
   }
 
 })

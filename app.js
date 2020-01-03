@@ -35,5 +35,6 @@ App({
   globalData: {
     userInfo: null,
     isLogin: false, 
+    URL: "http://jygl.uoh.edu.cn/TmAPI"
   }
 })
